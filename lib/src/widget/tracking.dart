@@ -43,7 +43,9 @@ class DetailInboxStatusTracking extends StatelessWidget {
                     horizontal: useMarginHorizontal ?? 20,
                     vertical: useMarginVertical ?? 10),
                 child:
-                    Container() //StatusTrackingInbox(controller: statusTracking),
+                    Container(
+                      child: Text('get data here'),
+                    ) //StatusTrackingInbox(controller: statusTracking),
                 )
             : Padding(
                 padding: EdgeInsets.symmetric(
