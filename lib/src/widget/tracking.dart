@@ -8,13 +8,13 @@ class DetailInboxStatusTracking extends StatelessWidget {
   const DetailInboxStatusTracking(
       {super.key,
       this.isLoading = false,
-      this.dataValue,
+      //this.dataValue,
       required this.statusTracking,
       this.useMarginVertical,
       this.useMarginHorizontal});
 
   final bool isLoading;
-  final NeedApprovalData? dataValue;
+  //final NeedApprovalData? dataValue;
   final StatusTrackingModel? statusTracking;
   final double? useMarginHorizontal;
   final double? useMarginVertical;
