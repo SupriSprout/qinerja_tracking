@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qinerja_tracking/src/model/need_approval_data.dart';
 import 'package:qinerja_tracking/src/model/status_tracking.dart';
+import 'package:qinerja_tracking/src/utils/qinerja_loading.dart';
 import 'package:qinerja_tracking/src/utils/utils.dart';
 import 'package:qinerja_tracking/src/widget/dash_painter.dart';
 
@@ -34,18 +35,17 @@ class DetailInboxStatusTracking extends StatelessWidget {
     const surfacePrimarySoftColor = Color(0xFFF8F8F8);
     const textPrimaryMediumColor = Color(0xFF6F6F6F);
     return isLoading
-        ? Center(
-            child: Container(),
+        ? const Center(
+            child: QinerjaLoading(),
           )
         : (statusTracking?.data?.histories?.length ?? 0) <= 3
             ? Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: useMarginHorizontal ?? 20,
                     vertical: useMarginVertical ?? 10),
-                child:
-                    Container(
-                      child: Text('get data here'),
-                    ) //StatusTrackingInbox(controller: statusTracking),
+                child: Container(
+                  child: Text('get data here'),
+                ) //StatusTrackingInbox(controller: statusTracking),
                 )
             : Padding(
                 padding: EdgeInsets.symmetric(

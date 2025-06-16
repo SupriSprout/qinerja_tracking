@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^1.0.3
+  rive: ^0.13.0
   intl: ^0.19.0
 
 dev_dependencies:
@@ -23,11 +23,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/loading_state.riv
+    - assets/loading_state_labamu.riv
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/to/asset-from-package
