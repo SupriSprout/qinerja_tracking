@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BrandConfig {
   static Color getColor(
@@ -14,8 +15,16 @@ class BrandConfig {
     }
   }
 
+  static Future<void> launchURL(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   static String convertDateMonthYearTime(DateTime value) {
-  return DateFormat('dd MMM yyyy • HH:mm')
-      .format(value.toLocal());
-}
+    return DateFormat('dd MMM yyyy • HH:mm').format(value.toLocal());
+  }
 }

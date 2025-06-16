@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qinerja_tracking/src/model/status_tracking.dart';
+import 'package:qinerja_tracking/src/utils/qinerja_employee_list_tile_info.dart';
 import 'package:qinerja_tracking/src/utils/tracking_color.dart';
 import 'package:qinerja_tracking/src/utils/utils.dart';
 import 'package:qinerja_tracking/src/widget/dash_painter.dart';
@@ -169,17 +170,17 @@ class StatusTrackingInbox extends StatelessWidget {
                         ],
                       ),
                     ),
-                  // if ((data?.message?.contains('Rejected') ?? false) ||
-                  //     (data?.message?.contains('Waiting') ?? false))
-                  //   QinerjaEmployeeListTileInfo(
-                  //     employeeName: data?.leadFullName ?? "-",
-                  //     avatarUrl: data?.leadProfilePicture,
-                  //     title: '',
-                  //     jobPosition: data?.leadJobPositionName,
-                  //     avatarSize: 40,
-                  //     whatsAppLink: data?.leadWhatsapp,
-                  //     teamsLink: data?.leadTeamLink,
-                  //   )
+                  if ((data?.message?.contains('Rejected') ?? false) ||
+                      (data?.message?.contains('Waiting') ?? false))
+                    QinerjaEmployeeListTileInfo(
+                      employeeName: data?.leadFullName ?? "-",
+                      avatarUrl: data?.leadProfilePicture,
+                      title: '',
+                      jobPosition: data?.leadJobPositionName,
+                      avatarSize: 40,
+                      whatsAppLink: data?.leadWhatsapp,
+                      teamsLink: data?.leadTeamLink,
+                    )
                 ],
               ),
             )

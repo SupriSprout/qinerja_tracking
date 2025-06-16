@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qinerja_tracking/src/model/need_approval_data.dart';
 import 'package:qinerja_tracking/src/model/status_tracking.dart';
+import 'package:qinerja_tracking/src/utils/qinerja_approve_amount_info.dart';
+import 'package:qinerja_tracking/src/utils/qinerja_employee_list_tile_info.dart';
 import 'package:qinerja_tracking/src/utils/qinerja_loading.dart';
 import 'package:qinerja_tracking/src/utils/tracking_color.dart';
 import 'package:qinerja_tracking/src/utils/utils.dart';
@@ -229,24 +231,24 @@ class DetailInboxStatusTracking extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                              // if (data.requestStatus == 'Approved')
-                              //   QinerjaApprovedAmountInfo(
-                              //     approvedAmount: '',
-                              //     reason: data.reason ?? '-',
-                              //   ),
-                              // if ((data.message?.contains('Waiting') ??
-                              //         false) &&
-                              //     !(data.message?.contains('Rejected') ??
-                              //         false))
-                              //   QinerjaEmployeeListTileInfo(
-                              //     employeeName: data.leadFullName ?? "-",
-                              //     avatarUrl: data.leadProfilePicture,
-                              //     title: '',
-                              //     jobPosition: data.leadJobPositionName,
-                              //     avatarSize: 40,
-                              //     whatsAppLink: data.leadWhatsapp,
-                              //     teamsLink: data.leadTeamLink,
-                              //   )
+                              if (data.requestStatus == 'Approved')
+                                QinerjaApprovedAmountInfo(
+                                  approvedAmount: '',
+                                  reason: data.reason ?? '-',
+                                ),
+                              if ((data.message?.contains('Waiting') ??
+                                      false) &&
+                                  !(data.message?.contains('Rejected') ??
+                                      false))
+                                QinerjaEmployeeListTileInfo(
+                                  employeeName: data.leadFullName ?? "-",
+                                  avatarUrl: data.leadProfilePicture,
+                                  title: '',
+                                  jobPosition: data.leadJobPositionName,
+                                  avatarSize: 40,
+                                  whatsAppLink: data.leadWhatsapp,
+                                  teamsLink: data.leadTeamLink,
+                                )
                             ],
                           ),
                         )

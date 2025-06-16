@@ -13,4 +13,7 @@ class TrackingColor {
   static const borderPrimaryBrandColor = Color(0xFFFFD300);
   static const surfacePrimarySoftColor = Color(0xFFF8F8F8);
   static const textPrimaryMediumColor = Color(0xFF6F6F6F);
+  static const textPrimaryLightColor = Color(0xFFA4A4A4);
+  static const borderPrimaryInvertColor = Color(0xFFFFFFFF);
+  static var shadowColor = Color(0xFF000000).withOpacity(0.2);
 }
