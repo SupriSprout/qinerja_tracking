@@ -10,7 +10,7 @@ class QinerjaLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     const borderPrimaryBrandColor = Color(0xFFFFD300);
     /// 1==1 is for labamu
-    return 1==1
+    return 1==2
         ? const SizedBox(
             height: 22,
             width: 22,
